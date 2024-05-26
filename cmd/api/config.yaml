@@ -1,0 +1,18 @@
+app:
+  name: e-commerce-gorm
+  port: ":4000"
+  encryption:
+    salt: 10
+    jwt_secret: Yud@_G@nt3ng
+
+db:
+  host: localhost
+  port: "3306"
+  user: root
+  password: root
+  name: e_commerce
+  connection_pool:
+    max_idle_connection: 10
+    max_open_connection: 30
+    max_lifetime_connection: 60 # seconds
+    max_idletime_connection: 60 # seconds
