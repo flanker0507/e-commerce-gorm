@@ -47,7 +47,7 @@ func WithPayload(payload interface{}) func(*Response) *Response {
 	}
 }
 
-func WithQuery(query int) func(*Response) *Response {
+func WithQuery(query interface{}) func(*Response) *Response {
 	return func(response *Response) *Response {
 		response.Query = query
 		return response

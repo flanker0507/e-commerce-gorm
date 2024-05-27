@@ -2,6 +2,7 @@ package main
 
 import (
 	"e-commerce-gorm/apps/auth"
+	"e-commerce-gorm/apps/product"
 	"e-commerce-gorm/eksternal/database"
 	"e-commerce-gorm/internal/config"
 	"github.com/gofiber/fiber/v2"
@@ -29,6 +30,7 @@ func main() {
 	})
 
 	auth.Init(router, db)
+	product.Init(router, db)
 
 	router.Listen(config.Cfg.App.Port)
 

@@ -31,7 +31,7 @@ func init() {
 }
 
 func TestRegister_Success(t *testing.T) {
-	req := LoginRequestPayload{
+	req := RegisterRequestPayload{
 		Email:    fmt.Sprintf("%v@gmail.com", uuid.NewString()),
 		Password: "dillaa",
 	}
@@ -43,7 +43,7 @@ func TestRegister_Fail(t *testing.T) {
 	t.Run("error email already used", func(t *testing.T) {
 		// Persiapan untuk email duplikat
 		email := fmt.Sprintf("%v@gmail.com", uuid.NewString())
-		req := LoginRequestPayload{
+		req := RegisterRequestPayload{
 			Email:    email,
 			Password: "dillaa",
 		}
